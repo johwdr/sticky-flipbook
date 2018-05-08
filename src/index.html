@@ -7,13 +7,14 @@
     <!-- inject:js -->
     <!-- endinject -->
     <style>
-        [data-sticky-image-waypoint] {
+        [data-sticky-flipbook-waypoint] {
             min-height: 500px;
             background: #f0f;
             font-size: 80px;
-            margin-bottom: 50px;
+            margin-bottom: 120vh;
+            min-height: 100vh;
         }
-        [data-webdok-sticky-image-scroll-container] {
+        [data-webdok-sticky-flipbook-scroll-container] {
             width: 100vw;
             height: 300px;
             position: fixed;
@@ -25,48 +26,37 @@
 
         }
         @media screen and (min-width: 600px) {
-            [data-webdok-sticky-image-scroll-container] {
+            [data-webdok-sticky-flipbook-scroll-container] {
                 right: 0;
                 left: auto;
                 width: 400px;
                 height: 100vh;
             }
         }
-        .sticky-image-transparent {
+        .sticky-flipbook-transparent {
             opacity: 0;
         }
         .sticky-enter-red {
             background: #f00;
         }
-        .sticky-enter-red img {
-            animation: enter .8s forwards;
 
-        }
-        @keyframes enter {
-            0% {
-                transform: translateX(100vw);
-            }
-            100% {
-                transform: translateX(0vw);
-            }
-        }
     </style>
 
 </head>
 <body>
-    <div data-webdok-sticky-image-scroll-container data-breakpoint="600">
+    <div data-webdok-sticky-flipbook-scroll-container data-breakpoint="600">
 
     </div>
     <br /><br /><br />
-    <div data-sticky-image-waypoint data-image="https://picsum.photos/400/600?image=0" data-image-mobile="https://picsum.photos/600/400?image=0">
+    <div data-sticky-flipbook-waypoint data-images="https://picsum.photos/400/600?image=0,https://picsum.photos/400/600?image=1,https://picsum.photos/400/600?image=2,https://picsum.photos/400/600?image=3" data-images-mobile="https://picsum.photos/600/400?image=0,https://picsum.photos/600/400?image=1,https://picsum.photos/600/400?image=2,https://picsum.photos/600/400?image=3">
         <p>"1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
     </div>
-    <br /><br /><br /><br /><br /><br /><br />
-    <div data-sticky-image-waypoint data-no-image data-image-class="sticky-image-transparent">
+
+    <div data-sticky-flipbook-waypoint data-no-image data-image-class="sticky-flipbook-transparent">
         <p>"2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ."</p>
     </div>
-    <br /><br /><br /><br /><br /><br />
-    <div data-sticky-image-waypoint data-image="https://picsum.photos/400/600?image=4" data-image-mobile="https://picsum.photos/600/400?image=4" data-image-class="sticky-enter-red">
+
+    <div data-sticky-flipbook-waypoint data-images="https://picsum.photos/400/600?image=4,https://picsum.photos/400/600?image=5" data-images-mobile="https://picsum.photos/600/400?image=4,https://picsum.photos/600/400?image=5" data-image-class="sticky-enter-red">
         <p>"3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ."</p>
     </div>
 

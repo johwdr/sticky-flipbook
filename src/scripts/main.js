@@ -1,11 +1,11 @@
 require('../styles/styles.scss');
 
 
-import StickyImageScroller from './components/sticky-image-scroller/sticky-image-scroller';
+import StickyFlipbookScroller from './components/sticky-flipbook-scroller/sticky-flipbook-scroller';
 
 
 function init() {
-    const component = new StickyImageScroller();
+    const component = new StickyFlipbookScroller();
 }
 
 
